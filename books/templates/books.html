@@ -1,0 +1,22 @@
+    {% extends "main.html" %}
+    {% block content %}
+        <h1>Books from our database</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>ISBN</th>
+                <th>NAME</th>
+                <th>DESCRIPTION</th>
+                <th>IS LOANED</th>
+            </tr>
+            {% for book in books %}
+                <TR>
+                    <TD>{{book.id}}</TD>
+                    <TD>{{book.name}}</TD>
+                    <TD>{{book.name}}</TD>
+                    <TD>{{book.description}}</TD>
+                    <TD>{{book.is_loaned}}</TD>
+                </TR>
+            {% endfor %}
+        </table>
+    {% endblock %}
