@@ -11,3 +11,28 @@ class Book(models.Model):
 
 def get_books():
     return Book.objects.all()
+
+
+class Author(models.Model):
+    name = models.CharField(max_length=64, null=False)
+
+
+def get_authors():
+    return Author.objects.all()
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=64, null=False)
+
+
+def get_categories():
+    return Category.objects.all()
+
+
+class Client(models.Model):
+    first_name = models.CharField(max_length=64, null=False)
+    last_name = models.CharField(max_length=64, null=False)
+
+
+def get_clients():
+    return Client.objects.all()
